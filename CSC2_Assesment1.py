@@ -4,6 +4,7 @@
 
 #import tkinter to make a GUI
 from tkinter import *
+from tkinter import ttk
 
 #quit function for the quit button
 
@@ -109,7 +110,6 @@ def buttons():
     Button(main_window,text='Quit', command=quit, width=10).grid(column=4,row=0,sticky=E)
     Button(main_window,text='Append Details',command=check).grid(column=3,row=1)
     Button(main_window,text='Print Details',command=print_details,width=10).grid(column=4,row=1,sticky=E)
-
     #creating empty entry boxes and putting labels
     Label(main_window,text='Customer Name').grid(column=0,row=0,sticky=E)
     entry_customer_name=Entry(main_window)
@@ -118,7 +118,17 @@ def buttons():
     entry_receipt_number = Entry(main_window)
     entry_receipt_number.grid(column=1,row=1)
     Label(main_window,text='Item Held').grid(column=0,row=2,sticky=E)
-    entry_item_held=Entry(main_window)
+    #creating a combo box for the items held
+    item_held=StringVar()
+    entry_item_held=ttk.Combobox(main_window,textvariable=item_held,state='readonly',
+                                 values=('Table, Chair and Linen',
+                                         'Crockery and Tableware',
+                                         'LED/Neon lights','Backdrop',
+                                         'Glassware and Bar','Prop',
+                                         'Kids party','Chalkboard and signage',
+                                         'Wedding and aisle','Ballon garland',
+                                         'Themed decoration','Helium and Balloons',
+                                         'Catering'),width=17)
     entry_item_held.grid(column=1,row=2)
     Label(main_window,text='Number Hired').grid(column=0,row=3,sticky=E)
     entry_number_hired=Entry(main_window)
