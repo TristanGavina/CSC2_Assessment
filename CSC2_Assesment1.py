@@ -144,7 +144,3 @@ def main():
     main_window.mainloop()
 
 main()
-
-
-
-    #IF THIS DOES NOT SHOW UP THEN YOU NO WORK
