@@ -62,11 +62,11 @@ def delete_row():
     total_entries = total_entries - 1
     delete_item.delete(0,'end')
     #clearing the last detail displayed on the GUI
-    Label(main_window, text="                                 ").grid(column=0, row=info+7)
-    Label(main_window, text="                                 ").grid(column=1, row=info+7)
-    Label(main_window, text="                                 ").grid(column=2, row=info+7)
-    Label(main_window, text="                                 ").grid(column=3, row=info+7)
-    Label(main_window, text="                                 ").grid(column=4, row=info+7)
+    Label(main_window, text="                                                       ").grid(column=0, row=info+7)
+    Label(main_window, text="                                                       ").grid(column=1, row=info+7)
+    Label(main_window, text="                                                       ").grid(column=2, row=info+7)
+    Label(main_window, text="                                                       ").grid(column=3, row=info+7)
+    Label(main_window, text="                                                       ").grid(column=4, row=info+7)
     #print every item in the list
     print_details()
 
@@ -114,10 +114,10 @@ def check():
     #variables used
     global details, entry_customer_name,entry_receipt_number,entry_item_held,entry_number_hired,total_entries
     entry_check=0
-    Label(main_window, text="                                                                ") .grid(column=2, row=2)
-    Label(main_window, text="                                                                ") .grid(column=2, row=3)
-    Label(main_window, text="                                                                ") .grid(column=2, row=4)
-    Label(main_window, text="                                                                ") .grid(column=2, row=5)
+    Label(main_window, text="                                                           ") .grid(column=2, row=2)
+    Label(main_window, text="                                                           ") .grid(column=2, row=3)
+    Label(main_window, text="                                                           ") .grid(column=2, row=4)
+    Label(main_window, text="                                                           ") .grid(column=2, row=5)
     #checking that costumer name is not blank, set error text if blank
     if len(entry_customer_name.get())==0:
         Label(main_window,fg='red',text='Please enter your name').grid(column=2,row=2,sticky=W)
